@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/',async (req,res)=>{
     const response = await Axios.get('https://jsonplaceholder.typicode.com/users');
-    const user= await response.json();
+    const user= response.data;
     console.log(user);
     res.send(user);
     
